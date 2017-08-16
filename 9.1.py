@@ -10,7 +10,7 @@ class Restaurant():
         print('\n',self.restaurant_name.title(), 'is a', self.cuisine_type.title())
         print('restaurant with in house butchers to customize your cuts')
 
-    def open_restaurant():
+    def open_restaurant(self):
         print(self.restaurant_name.title(), 'is now open!')
 
 myFamilyRestaurant = Restaurant('El_Torito','mexican_as_fuck')
