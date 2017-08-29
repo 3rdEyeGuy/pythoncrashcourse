@@ -1,8 +1,6 @@
 #Write class called 'Admin' that inherits the User class.
-#Add an attribute, 'privileges', that stores a list of strngs.
 #Write a method called 'show_priveleges()' that lists the
 #admin's set of privileges.
-#Create an instance and call method.
 
 #write a separate Privileges class.
 #The class should have a single attribute 'privileges'.
@@ -34,8 +32,8 @@ class User():
         print('Hello',self.first_name.title() + '!')
 
 class Privileges():
-    def __init__(self,privileges=['adding posts','deleting posts','banning users']):
-        self.privileges = privileges 
+    def __init__(self):
+        self.privileges = ['adding posts','deleting posts','banning users']
 
     def show_privileges(self):
         print('An administrator''s privileges include:')
@@ -48,6 +46,7 @@ class Admin(User):
     def __init__(self, first_name, last_name,age,gender):
         super().__init__(first_name,last_name,age,gender)
         self.myprivileges = Privileges()
+        print(self.first_name.title(), self.last_name.title(), 'is an Admin.')
 
 myself = Admin('octavio', 'sosa', '23', 'cis-male-trans')
 myself.describe_user()
