@@ -22,9 +22,23 @@ class User():
 
     def describe_user(self):
         print(self.first_name.title(),self.last_name.title(), 'is a',
-              self.age.title(),'year old',self.gender.title(), 'pothead.')
+              self.age.title(),'year old',self.gender, 'pothead.')
 
     def greet_user(self):
         print('Hello',self.first_name.title() + '!')
 
+class Admin(User):
+    def __init__(self, first_name, last_name,age,gender):
+        super().__init__(first_name,last_name,age,gender)
+        self.privileges = ['adding posts','deleting posts','banning users']
 
+    def show_privileges(self):
+        print(self.first_name.title(), self.last_name.title(), 'is an administrator whose privileges include:')
+        for i in range(len(self.privileges)):
+            if self.privileges[i] == self.privileges[len(self.privileges) - 1]:
+                print('and', self.privileges[i] + '.')
+            else: print(self.privileges[i] + ',')
+
+myself = Admin('octavio', 'sosa', '23', 'cis-male-trans')
+myself.describe_user()
+myself.show_privileges()
