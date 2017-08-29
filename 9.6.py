@@ -29,16 +29,16 @@ class Restaurant():
 class IceCreamStand(Restaurant):
     def __init__(self, restaurant_name,cuisine_type):
         super().__init__(restaurant_name,cuisine_type)
-    self.flavors = ['vanilla','chocolate','strawberry']
+        self.flavors = ['vanilla','chocolate','strawberry']
 
-    def disp_flavors():
+    def disp_flavors(self):
         print('Our flavors include:')
-        for i in range(self.flavors):
-            print(flavors[i] + ', ')
+        for i in range(len(self.flavors)):
+            if self.flavors[i] == self.flavors[len(self.flavors) - 1]:
+                print('and', self.flavors[i] + '.')
+            else: print(self.flavors[i] + ', ')
 
-toritoCreams = IceCreamStand()
-toritoCreams.restaurant_name = El_Torito_Nieveria
-toritoCreams.cuisine_type = Mexican_Ice_Cream
+toritoCreams = IceCreamStand('El_Torito_Nieveria','Mexican_Ice_Cream')
 toritoCreams.describe_restaurant()
 toritoCreams.open_restaurant()
 toritoCreams.disp_flavors()
