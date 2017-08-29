@@ -21,21 +21,25 @@ class Restaurant():
 
     def describe_restaurant(self):
         print(self.restaurant_name.title(), 'is a', self.cuisine_type.title(),
-              'restaurant with in house butchers to customize your cuts.')
+              'restaurant.')
 
     def open_restaurant(self):
         print(self.restaurant_name.title(), 'is now open!')
 
-myFamilyRestaurant = Restaurant('El_Torito','mexican_as_fuck')
-myFamilyRestaurant.describe_restaurant()
-myFamilyRestaurant.open_restaurant()
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name,cuisine_type):
+        super().__init__(restaurant_name,cuisine_type)
+    self.flavors = ['vanilla','chocolate','strawberry']
 
-restaurant = Restaurant('Kin-Lin','ching-chong_chinese')
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
-restaurant.read_number_served()
-restaurant.set_number_served(69)
-restaurant.read_number_served()
-restaurant.increment_number_served(3)
-restaurant.read_number_served()
+    def disp_flavors():
+        print('Our flavors include:')
+        for i in range(self.flavors):
+            print(flavors[i] + ', ')
+
+toritoCreams = IceCreamStand()
+toritoCreams.restaurant_name = El_Torito_Nieveria
+toritoCreams.cuisine_type = Mexican_Ice_Cream
+toritoCreams.describe_restaurant()
+toritoCreams.open_restaurant()
+toritoCreams.disp_flavors()
 
