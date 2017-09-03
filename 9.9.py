@@ -75,9 +75,9 @@ class ElectricCar(Car):
         super().__init__(manufacturer, model, year)
         self.battery = Battery()
 
-myCar = ElectricCar(Tesla, modelS, 2018)
-myCar.get_range()
-myCar.upgrade_battery()
-myCar.get_range()
+myCar = ElectricCar("Tesla","modelS","2018")
+myCar.battery.get_range()
+myCar.battery.upgrade_battery()
+myCar.battery.get_range()
 
 
