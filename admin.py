@@ -1,3 +1,5 @@
+from user import User 
+
 class Privileges():
     def __init__(self):
         self.privileges = ['adding posts','deleting posts','banning users']
