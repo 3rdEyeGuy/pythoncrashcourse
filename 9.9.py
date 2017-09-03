@@ -59,7 +59,10 @@ class Battery():
         message = "This car can go approximately " + str(range)
         message += " miles on a full charge."
         print(message)
-    
+
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
         
 class ElectricCar(Car):
     """Models aspects of a car, specific to electric vehicles."""
@@ -71,3 +74,10 @@ class ElectricCar(Car):
         """
         super().__init__(manufacturer, model, year)
         self.battery = Battery()
+
+myCar = ElectricCar(Tesla, modelS, 2018)
+myCar.get_range()
+myCar.upgrade_battery()
+myCar.get_range()
+
+
