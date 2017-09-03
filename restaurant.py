@@ -13,7 +13,7 @@ class Restaurant():
         self.number_served += new_customers
 
     def describe_restaurant(self):
-        print(self.restaurant_name.title(), 'is a', self.cuisine_type(),
+        print(self.restaurant_name.title(), 'is a', self.cuisine_type,
               'restaurant.')
 
     def open_restaurant(self):
