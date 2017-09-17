@@ -13,7 +13,7 @@ try:
 except:
     print("Error: Please enter a number.")
 
-    while num1 != int() & num2 != int():
+    while num1.isdigit() == False | num2.isdigit() == False:
         num1 = int(input("Enter the 1st number: "))
         num2 = int(input("Enter the 2nd number: "))
         numsum = num1 + num2
