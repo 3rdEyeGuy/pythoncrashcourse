@@ -1,4 +1,7 @@
-def city_format(city, country, population):
+def city_format(city, country, population = ''):
     """Formats the city and country in a single string"""
-    cityCountry = city + ', ' + country + ' - ' + 'population' + population
+    if population:
+        cityCountry = city + ', ' + country + ' - ' + 'population' + population
+    else:
+        cityCountry = city + ', ' + country
     return cityCountry.title()
