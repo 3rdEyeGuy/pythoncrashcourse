@@ -9,12 +9,14 @@ class EmployeeTestCase(unittest.TestCase):
         self.employeeInfo = Employee('octavio', 'sosa', 100000)
 
     def test_give_default_raise(self):
+        """test default raise"""
         self.employeeInfo.give_raise()
-        self.assertIn(105000, self.employeeInfo.salary)
+        self.assertIn(str(105000), str(self.employeeInfo.salary))
 
     def test_give_custom_raise(self):
+        """test custom raise"""
         self.employeeInfo.give_raise(25000)
-        self.assertIn(125000, self.employeeInfo.salary)
+        self.assertIn(str(125000), str(self.employeeInfo.salary))
 
 unittest.main()
         
