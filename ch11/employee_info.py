@@ -9,4 +9,4 @@ class Employee():
 
     def give_raise(self, salRaise = 5000):
         """default raise of $5000 but can be customized"""
-        self.salary = salary + salRaise
+        self.salary = self.salary + salRaise
