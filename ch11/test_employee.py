@@ -6,7 +6,7 @@ class EmployeeTestCase(unittest.TestCase):
     """Tests default raise of salary and customized raise"""
     def setUp(self):
         """create instance of an employee"""
-        employeeInfo = Employee('octavio', 'sosa', 100000)
+        self.employeeInfo = Employee('octavio', 'sosa', 100000)
 
     def test_give_default_raise(self):
         self.employeeInfo.give_raise()
