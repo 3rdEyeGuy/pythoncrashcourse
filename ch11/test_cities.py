@@ -10,6 +10,7 @@ class CityTestCase(unittest.TestCase):
         self.assertEqual(formatted_city, 'Santiago, Chile')
 
     def test_city_country_population(self):
+        """Tests for optional 'populations' parameter"""
         format_cityCtryPop = city_format('santiago','chile','5000000')
         self.assertEqual(format_cityCtryPop, 'Santiago, Chile - population 5000000')
 
