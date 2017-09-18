@@ -1,7 +1,7 @@
 import json
 
 def readNum():
-    #read favorite number from file
+    """read favorite number from file"""
     fileName = 'favNum.json'
     with open(fileName) as f_obj:
         favNum = json.load(f_obj)
@@ -9,7 +9,7 @@ def readNum():
     return favNum
 
 def askNum():
-    #Prompt user for favorite number
+    """Prompt user for favorite number and store in fie"""
     favNum = input("What is your favorite number? ")
 
     #store fav. number in a file
