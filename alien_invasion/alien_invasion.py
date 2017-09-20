@@ -10,11 +10,16 @@ def run_game():
     # Start the main loop for the game.
     while True:
 
-        # Watch for keyboard and mouse events.
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-
+        #Prevent 'for' loop from running endlessley without closing window
+        running = True
+        while running:
+            # Watch for keyboard and mouse events.
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    sys.exit()
+                    #Prevent 'for' loop from running endlessley without closing window
+                    running = False
+                    
         # Make the most recently drawn screen visible.
         pygame.display.flip()
 
