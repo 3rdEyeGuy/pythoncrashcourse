@@ -1,0 +1,6 @@
+In Python you can create classes.
+In Python you can hack into computers.
+In Python you can create video games.
+In Python you can make electronic music.
+In Python you can write into and read files.
+In Python you can debug code using exceptions.
